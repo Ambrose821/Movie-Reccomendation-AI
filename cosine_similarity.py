@@ -8,6 +8,7 @@ cv = CountVectorizer()
 #This gives us our vector matrix(array of vectors)
 count_matrix = cv.fit_transform(text).toarray() #Without to array it is a weird matrix formula from scikit toarray() is regular matrix that you are use to
 
+text_similarity = cosine_similarity(count_matrix)
 
 print(count_matrix)
 print(cosine_similarity(count_matrix))
